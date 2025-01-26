@@ -2,8 +2,6 @@
 title:  "Advanced examples"
 mathjax: true
 layout: post
-published: false
-```markdown
 categories: media
 ---
 
