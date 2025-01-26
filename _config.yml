@@ -1,7 +1,6 @@
 title: "Jose Aries E. De Los Santos"
 author: "Jose Aries E. De Los Santos"
 description: "Made with <b style=\"color: #f45;\">&lt;3</b>"
-# permalink: /:title/
 permalink: /:slug/ 
 lang: "en"
 excerpt_separator: "\n\n\n"
