@@ -26,3 +26,32 @@ body > footer
   box-shadow: 0 0 .6em rgba($dark, 0.04) inset
   border-top: 1px solid reduce(14)
   opacity: .9
+
+  /* Default (light) theme */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark theme */
+[data-theme="dark"] body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Toggle button styles */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #f45;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background-color: #c33;
+}

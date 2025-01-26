@@ -30,7 +30,33 @@
 <header>
   <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
   {% include menu.html menu=pages %}
+  <button id="theme-toggle" class="theme-toggle">
+    Switch to Dark Mode
+  </button>
 </header>
+
+<script>
+  // Toggle dark mode
+  const toggleButton = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+    toggleButton.textContent = 'Switch to Light Mode';
+  }
+
+  toggleButton.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'dark') {
+      toggleButton.textContent = 'Switch to Light Mode';
+    } else {
+      toggleButton.textContent = 'Switch to Dark Mode';
+    }
+  });
+</script>
 
 {{ content }}
 
