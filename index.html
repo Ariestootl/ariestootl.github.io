@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: default
 title: "Home"
 ---
@@ -7,22 +7,4 @@ title: "Home"
   {% include home.html %}
 {% else %}
   {% include archive.html title="Posts" %}
-{% endif %} -->
-
-
----
-layout: default
-title: "Home"
----
-
-{% assign show_posts = false %} <!-- Set this variable to control the visibility -->
-
-{% if show_posts %}
-  {% if site.show_excerpts %}
-    {% include home.html %}
-  {% else %}
-    {% include archive.html title="Posts" %}
-  {% endif %}
-{% else %}
-  <p>Posts are currently hidden.</p>
 {% endif %}
